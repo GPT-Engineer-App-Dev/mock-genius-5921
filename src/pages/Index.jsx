@@ -1,15 +1,25 @@
 // Complete the Index page component here
 // Use chakra-ui
-import { Button } from "@chakra-ui/react"; // example
-import { FaPlus } from "react-icons/fa"; // example - use react-icons/fa for icons
+import { Heading, Grid, GridItem, Circle } from "@chakra-ui/react";
 
 const Index = () => {
-  // TODO: Create the website here!
   return (
-    <Button>
-      Hello world! <FaPlus />
-    </Button>
-  ); // example
+    <>
+      <Heading as="h1" size="xl" textAlign="center" mt={8}>
+        Othello
+      </Heading>
+
+      <Grid templateColumns="repeat(8, 1fr)" gap={2} maxW="480px" mx="auto" mt={8}>
+        {Array(64)
+          .fill(null)
+          .map((_, i) => (
+            <GridItem key={i} w="100%" h="0" pb="100%" position="relative">
+              <Circle size="80%" bg={(i >= 27 && i <= 36 && i % 2 === 0) || (i >= 35 && i <= 44 && i % 2 !== 0) ? "white" : "green.500"} position="absolute" top="50%" left="50%" transform="translate(-50%, -50%)" />
+            </GridItem>
+          ))}
+      </Grid>
+    </>
+  );
 };
 
 export default Index;
