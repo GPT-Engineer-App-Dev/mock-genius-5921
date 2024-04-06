@@ -1,4 +1,4 @@
-# mock-genius-5921bbabbbbaba
+# mock-genius-5921baabaabbba
 
 REPLACE_WITH_PROJECT_DESCRIPTION
 
@@ -20,7 +20,7 @@ REPLACE_WITH_TECH_STACK_POINTS
 
 ```sh
 git clone https://github.com/GPT-Engineer-App-Dev/mock-genius-5921.git
-cd mock-genius-5921bbabbbbaba
+cd mock-genius-5921baabaabbba
 npm i
 ```
 
